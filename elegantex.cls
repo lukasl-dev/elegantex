@@ -66,6 +66,7 @@
 
 % page style
 \pagestyle{fancy}
+\tocloftpagestyle{fancy}
 
 % clear fancy preset
 \fancyhf{}
