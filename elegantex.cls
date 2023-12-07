@@ -20,8 +20,6 @@
 \RequirePackage{fontspec}
 \RequirePackage{float}
 
-\usetikzlibrary{calc}
-
 % ---------------------------------------- %
 % Options
 % ---------------------------------------- %
@@ -105,6 +103,10 @@
     urlcolor=primary,
     citecolor=primary,
 }
+
+% use black colour for links in toc
+\renewcommand{\cftsecfont}{\hypersetup{linkcolor=black}\bfseries}
+\renewcommand{\cftsecpagefont}{\hypersetup{linkcolor=black}\normalfont}
 
 % title page
 \renewcommand{\maketitle}{
