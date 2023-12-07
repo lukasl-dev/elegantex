@@ -5,7 +5,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{elegantex}[A fancy LaTeX template.]
-\LoadClass{article}
+\LoadClass[a4paper]{article}
 
 % ---------------------------------------- %
 % Packages
@@ -20,6 +20,7 @@
 \RequirePackage{fontspec}
 \RequirePackage{float}
 
+\usetikzlibrary{calc}
 
 % ---------------------------------------- %
 % Options
@@ -93,14 +94,8 @@
             \node[anchor=center, text=white, font=\large] at ([yshift=-0.75cm]current page.north) {\textbf{\@title}};
             \node[anchor=center, text=white, font=\large] at ([yshift=-1.3cm]current page.north) {\@subtitle};
         \fi
-
-        % Draw the orbital circles, starting exactly from the top edge of the header
-        \foreach \i in {2.5, 3.5, 4} {
-            \draw[accentprimary, opacity=0.5, thick] ([xshift=-\i cm]current page.north east) arc[start angle=0, end angle=-180, radius=\i cm];
-        }
     \end{tikzpicture}
 }
-
 
 % link colours
 \hypersetup{
@@ -141,11 +136,23 @@
                     \begin{center}
                         \fontsize{40}{48} \selectfont \textbf{\@title}
                         \\
-                        \vspace{3cm}
+                        \vspace{0.5cm}
+                        \LARGE{\@subtitle}
+                        \\
+                        \vspace{2cm}
                         \Large{\@slogan}
                     \end{center}
                 \end{minipage}
             };
+
+            \node at ([yshift=3cm]current page.south) {
+                \color{white}
+                \begin{minipage}{\textwidth}
+                    \centering
+                    \Large{\@author}
+                \end{minipage}
+            };
+
         \end{tikzpicture}
         \thispagestyle{empty}
     \end{titlepage}
