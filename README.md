@@ -49,11 +49,11 @@ This template can be used as document class inside of your `.tex` file:
 After declaring the document class, you can define the following parameters:
 
 ```tex
-\title{EleganTeX}
-\subtitle{Template}
-\author{Lukas Leeb}
-\slogan{A LaTeX class for elegant articles}
-\logo{logo_transparent.png}
+\title{EleganTeX} % required
+\subtitle{Template} % optional
+\author{Lukas Leeb} % optional
+\slogan{A LaTeX class for elegant articles} % optional
+\logo{logo_transparent.png} % optional
 ```
 
 ### Title Page
