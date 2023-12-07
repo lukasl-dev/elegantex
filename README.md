@@ -49,10 +49,11 @@ This template can be used as document class inside of your `.tex` file:
 After declaring the document class, you can define the following parameters:
 
 ```tex
-\title{EleganTeX} % required
-\subtitle{LaTeX Template} % optional
-\slogan{A fancy LaTeX template for modern articles} % optional
-\logo{images/logo_transparent.png} % optional
+\title{EleganTeX}
+\subtitle{Template}
+\author{Lukas Leeb}
+\slogan{A LaTeX class for elegant articles}
+\logo{logo_transparent.png}
 ```
 
 ### Title Page
@@ -69,24 +70,25 @@ The regular `\maketitle` LaTeX command is overriden by the template. You can use
 \end{document}
 ```
 
-## Full Example 
+## Full Example
 
 ```tex
 \documentclass{elegantex/elegantex}
 
-\usepackage[english]{babel}
-\usepackage{lipsum}
-
-\title{EleganTeX}
-\subtitle{LaTeX Template}
-\slogan{A fancy LaTeX template for modern articles}
-\logo{images/logo_transparent.png}
+\title{EleganTeX} % required
+\subtitle{Template} % optional
+\author{Lukas Leeb} % optional
+\slogan{A LaTeX class for elegant articles} % optional
+\logo{logo_transparent.png} % optional
 
 \begin{document}
     \maketitle
-    
+
+    \tableofcontents
+    \newpage
+
     \section{Introduction}
 
-    \lipsum[1]
+    Some introduction text...
 \end{document}
 ```
