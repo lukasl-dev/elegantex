@@ -50,9 +50,6 @@
 % page margins
 \geometry{top=3cm, bottom=2cm, left=2cm, right=2cm}
 
-% max toc depth
-\setcounter{tocdepth}{2}
-
 % default color scheme
 \definecolor{primary}{RGB}{91, 35, 99} 
 \definecolor{darkprimary}{RGB}{61, 5, 69}
@@ -105,8 +102,12 @@
 }
 
 % use black colour for links in toc
-\renewcommand{\cftsecfont}{\hypersetup{linkcolor=black}\bfseries}
-\renewcommand{\cftsecpagefont}{\hypersetup{linkcolor=black}\normalfont}
+\renewcommand{\cftsecfont}{\hypersetup{linkcolor=black}}
+\renewcommand{\cftsubsecfont}{\hypersetup{linkcolor=black}}
+\renewcommand{\cftsubsubsecfont}{\hypersetup{linkcolor=black}}
+\renewcommand{\cftparafont}{\hypersetup{linkcolor=black}}
+\renewcommand{\cftsubparafont}{\hypersetup{linkcolor=black}}
+
 
 % title page
 \renewcommand{\maketitle}{
