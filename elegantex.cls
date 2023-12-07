@@ -137,9 +137,12 @@
                     \begin{center}
                         \fontsize{40}{48} \selectfont \textbf{\@title}
                         \\
-                        \vspace{0.5cm}
-                        \LARGE{\@subtitle}
-                        \\
+                        \ifx\@subtitle\empty
+                        \else
+                            \vspace{0.5cm}
+                            \LARGE{\@subtitle}
+                            \\
+                        \fi
                         \vspace{2cm}
                         \Large{\@slogan}
                     \end{center}
