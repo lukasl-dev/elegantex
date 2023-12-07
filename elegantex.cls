@@ -108,7 +108,6 @@
 \renewcommand{\cftparafont}{\hypersetup{linkcolor=black}}
 \renewcommand{\cftsubparafont}{\hypersetup{linkcolor=black}}
 
-
 % title page
 \renewcommand{\maketitle}{
     \begin{titlepage}
@@ -159,7 +158,6 @@
                     \Large{\@author}
                 \end{minipage}
             };
-
         \end{tikzpicture}
         \thispagestyle{empty}
     \end{titlepage}
